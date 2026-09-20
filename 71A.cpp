@@ -7,7 +7,7 @@ int main(){
     for(int i = 0 ; i < n ; i++){
         std::string k ; 
         std::cin>>k ; 
-        if(k.length() < 10 && k.length() >= 1){
+        if(k.length() <= 10 && k.length() >= 1){
             s.push_back(k);
         }
         else{
