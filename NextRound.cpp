@@ -1,15 +1,20 @@
 #include <iostream>
-
+#include <vector>
 int main(){
-    int n , m ; 
+    int n , k  ; 
     int cnt = 0 ; 
-    std::cin >> n >>m ; 
+    std::cin >> n >>k ; 
+    std::vector<int> ans ; 
     for(size_t i = 0 ; i < n ; ++i){
         int inputs ;
-        std::cin>>inputs ; 
-        if(inputs > m) cnt++; 
+        std::cin>>inputs; 
+        ans.push_back(inputs);
     }
-    if(cnt == 0)std::cout<<0 ; 
-    else if(cnt > 1)std::cout<<cnt ; 
+    for(int i = 0 ; i < ans.size(); i++){
+        if((ans[i]>= ans[k-1]) && ans[i]>0){
+            cnt++; 
+        }
+    }
+    std::cout<<cnt ; 
 
 }
