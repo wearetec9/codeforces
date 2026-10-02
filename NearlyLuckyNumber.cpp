@@ -1,24 +1,16 @@
 #include <iostream>
 int main(){
-    int n ; 
+    long long n ; 
     std::cin>>n;
-    int luckySeven = 0 ; 
-    int luckyFour = 0 ;
-    int randomNumber = 0 ;  
+    int luckyNumber = 0 ;
     while(n > 0){
-        if(n % 10 == 7){
-            luckySeven++ ;
-            n /= 10 ;
+        if(n % 10 == 7 || n % 10 == 4){
+            luckyNumber++ ;
         }
-        else if(n % 10 == 4) {
-            luckyFour++;
-            n /= 10 ;
-        }else{
-            n /= 10 ;
-            randomNumber++ ;
-        }
+            n /=10;
+    
     } 
-    if(luckyFour + luckySeven == 7 || luckyFour + luckySeven == 4 || randomNumber == 0)std::cout<<"YES"; 
+    if(luckyNumber == 7 || luckyNumber == 4)std::cout<<"YES"; 
     else std::cout<<"NO";
 
 }
