@@ -3,8 +3,7 @@
 int main(){
     int n ;
     std::cin>>n ; 
-    int currentYear = n ; 
-    int cnt = 1 ; 
+    int currentYear = n ;  
     while(true){
         n++;
         std::string year = std::to_string(n);
@@ -15,9 +14,6 @@ int main(){
                     unique = false;
                     break ;  
                 }
-            }
-            if(!unique){
-                break ; 
             }
         } 
         if(unique){
